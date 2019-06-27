@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-	
-	
 	public static void main(String[] args) throws IOException
 	{
 		Scanner S = new Scanner(System.in);
@@ -42,9 +40,10 @@ public class Main {
 						System.out.println("a. Create Question Pool");
 						System.out.println("b. Create Quiz");
 						System.out.println("c. Display Questions");
+						System.out.println("d. Search Questions");
 						System.out.println("d. Update Questions");
-						System.out.println("e. Delete Questions");
-						System.out.println("f. Quit");
+						System.out.println("f. Delete Questions");
+						System.out.println("g. Quit");
 						System.out.println("Enter your response: ");
 						response = S.nextLine();
 						
@@ -60,12 +59,15 @@ public class Main {
 								Qz.displayAllQuestions(Qz.QuestionPool, S);
 								break;
 							case "d":
-								Qz.updateQuestions(Qz.QuestionPool, S);
+								Qz.searchQuestions(Qz.QuestionPool, S);
 								break;
 							case "e":
+								Qz.updateQuestions(Qz.QuestionPool, S);
+								break;
+							case "f":
 								Qz.deleteQuestions(Qz.QuestionPool, S);
 						}
-					}while(!response.contains("f"));							
+					}while(!response.contains("g"));							
 				}
 				else
 				{

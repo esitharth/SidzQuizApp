@@ -48,7 +48,8 @@ public class Questions implements Serializable {
 		
 	}
 	
-	float evaluateQuestion(String Response) {
+	float evaluateQuestion(String Response) //Scoring function 
+	{
 		if(MCQ)
 		{
 			List<String> list1 = new java.util.ArrayList<>(Arrays.asList(CheckResponse.split("\\|")));
@@ -59,12 +60,12 @@ public class Questions implements Serializable {
 				Mark = 1;
 				return Mark;
 			}
-			else
+			else //enables multi-option analysis and scoring
 			{
 				int givenResponses = list2.size();	
 				list2.retainAll(list1);
 				int givenCorrectResponses = list2.size();
-				if(givenResponses >= givenCorrectResponses)
+				if(givenResponses >= givenCorrectResponses) 
 				{
 					Mark = (float)givenCorrectResponses/givenResponses;
 				}
@@ -75,7 +76,7 @@ public class Questions implements Serializable {
 				return Mark;
 			}
 		}
-		else 
+		else //scoring function on key word analysis
 		{
 			List<String> listofKeywords = new java.util.ArrayList<>(Arrays.asList(CheckResponse.split("\\|")));
 			List<String> listofWords = new java.util.ArrayList<>(Arrays.asList(Response.split(" ")));

@@ -34,6 +34,27 @@ public class QuestionBank extends Questions {
 		}
 		this.writeToFileQB();
 	}
+	void searchQuestions(List<Questions> Qs, Scanner S)
+	{
+		//List<Questions> searchResult = new ArrayList<Questions>();
+		System.out.println("Enter the Topic under which to search the Questions: ");
+		String Topic = S.nextLine();
+		int i=1;
+		System.out.println("--------------------------------------------------------");
+		System.out.println("Questions under the topic: ");
+		
+		for (Questions q : Qs)
+		{
+			if(q.Topic.equals(Topic) )
+			{
+				System.out.println(i++ + ". "+ q.Question);
+				//searchResult.add(q);
+			}
+		}
+		if(i==1)
+			System.out.println("Question Pool has no questions under the searched topic.");
+			System.out.println("--------------------------------------------------------");
+	}
 	void displayAllQuestions(List<Questions> Qs, Scanner S)
 	{
 		int i=1;

@@ -45,7 +45,7 @@ public class Quiz extends QuestionBank implements Serializable{
 	{
 		System.out.println("Enter the Title of the Quiz: ");
 		this.Title = S.nextLine();
-		System.out.println("Enter the Topic to be included(comma seperated):");
+		System.out.println("Enter the Topics to be included(comma seperated):");
 		this.Topics = Arrays.asList(S.nextLine().split("\\s*,\\s*"));
 		System.out.println("Enter the difficulty level(low, medium, high): ");
 		this.difficulty = S.nextLine();
