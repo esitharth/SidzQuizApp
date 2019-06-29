@@ -20,7 +20,8 @@ import java.lang.reflect.Type;
 public class QuestionBank extends Questions {
 	
 	List<Questions> QuestionPool = new ArrayList<Questions>();
-	String filenameQB = "/home/sitharth/eclipse-workspace/SidzQuizApp/Files/QuestionBank.of";
+	String filenameQB = this.getClass().getResource("/files/QuestionBank.of").getPath();
+			//"/home/sitharth/eclipse-workspace/SidzQuizApp/Files/QuestionBank.of";
 	XStream xStream = new XStream();
 	
 	void createQuestionPool(Scanner S) throws IOException
@@ -134,6 +135,7 @@ public class QuestionBank extends Questions {
 		FileReader in = new FileReader(this.filenameQB);
 		XStream xs = new XStream();
 		QuestionBank QB = (QuestionBank)xs.fromXML(in);
+		in.close();
 		if(QB != null)
 		{
 			return QB.QuestionPool;

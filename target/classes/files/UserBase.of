@@ -1,0 +1,11 @@
+<Quiz.User>
+  <UserList>
+    <Quiz.User reference="../.."/>
+  </UserList>
+  <filenameUB defined-in="Quiz.UserBase">/home/sitharth/eclipse-workspace/SidzQuizApp/Files/UserBase.of</filenameUB>
+  <Name>Admin</Name>
+  <Id>AAA</Id>
+  <Password>ValidateAdmin</Password>
+  <Type>false</Type>
+  <filenameUB>/home/sitharth/eclipse-workspace/SidzQuizApp/Files/UserBase.of</filenameUB>
+</Quiz.User>

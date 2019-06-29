@@ -41,7 +41,7 @@ public class Main {
 						System.out.println("b. Create Quiz");
 						System.out.println("c. Display Questions");
 						System.out.println("d. Search Questions");
-						System.out.println("d. Update Questions");
+						System.out.println("e. Update Questions");
 						System.out.println("f. Delete Questions");
 						System.out.println("g. Quit");
 						System.out.println("Enter your response: ");
@@ -79,6 +79,7 @@ public class Main {
 				System.out.println("Have a nice day!");
 				break;
 			}
-		}while(!(loginGate.contains("S") | loginGate.contains("s")|loginGate.contains("S") | loginGate.contains("s")));				
+		}while(!(loginGate.contains("S") | loginGate.contains("s")|loginGate.contains("S") | loginGate.contains("s")));	
+		S.close();
 	}	
 }

@@ -13,6 +13,7 @@ public class Questions implements Serializable {
 	float Mark = 0;
 	int TotalQuestions;
 	String difficulty;
+	
 	Questions getQuestion(Scanner S) {
 		System.out.println("Enter Question: ");
 		Question = S.nextLine();
@@ -89,10 +90,9 @@ public class Questions implements Serializable {
 			
 		}
 	}
-	
-	String displayQuestion(Questions q, Scanner P)
+	Questions displayQuestion(Questions q, Scanner P)
 	{
-		String response = new String();
+		//String response = new String();
 		System.out.println(q.Question);
 		if(MCQ)
 		{
@@ -104,14 +104,14 @@ public class Questions implements Serializable {
 				i++;
 			}
 			System.out.println("Enter your response(for multiple responses seperate option with '|' without spaces between):");
-			response = P.nextLine();
-			return response;
+			q.Response = P.nextLine();
+			return q;
 		}
 		else
 		{
 			System.out.println("Your response: ");
-			response = P.nextLine();
-			return response;
+			q.Response = P.nextLine();
+			return q;
 		}
 		
 	}

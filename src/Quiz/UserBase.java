@@ -20,7 +20,8 @@ public class UserBase{
 	}
 	UserBase UB;
 	List<User> UserList = new ArrayList<User>();
-	String filenameUB = "/home/sitharth/eclipse-workspace/SidzQuizApp/Files/UserBase.of";
+	String filenameUB = this.getClass().getResource("/files/UserBase.of").getPath();
+	//"/home/sitharth/eclipse-workspace/SidzQuizApp/Files/UserBase.of";
 	
 	boolean checkUser(User u) 
 	{

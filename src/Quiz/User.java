@@ -10,16 +10,17 @@ import com.thoughtworks.xstream.XStream;
 
 public class User extends UserBase{
 	User(Scanner S) throws IOException {
+		//Presently user login is not enabled, developed for future usage
 		//super.UB = super.readfromFileUB();
 //		if(this.UB.UserList.isEmpty())
 //		{
-//			if(this.knowStudentorAdmin())
+//			if(this.knowStudentorAdmin()) //Student login
 //			{
 //				this.getStudentDetail(S);
 //				super.addUser(this);
 //				super.writeToFileUB();
 //			}
-//			else
+//			else //Admin login
 //			{
 //				this.getAdminDetail(S);
 //				super.addUser(this);
@@ -32,9 +33,10 @@ public class User extends UserBase{
 	String Id;
 	String Password;
 	Boolean Type; //True for Student, False for Admin
-	String filenameUB = "/home/sitharth/eclipse-workspace/SidzQuizApp/Files/UserBase.of";
+	String filenameUB = this.getClass().getResource("/files/UserBase.of").getPath();
+			//"/home/sitharth/eclipse-workspace/SidzQuizApp/Files/UserBase.of";
 	
-	void takeQuiz(Quiz Q)
+	void takeQuiz(Quiz Q) throws IOException
 	{	Scanner S = new Scanner(System.in);
 		Q.runQuiz(Q, S);		
 	}

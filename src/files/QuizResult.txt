@@ -1,0 +1,22 @@
+Quiz Results
+1. Question is, Is Paris an adorable city?
+[yes, no, maybe, don't know]
+
+Given response: a
+Correct response: a
+Score :1.0
+2. Are you a Parisian?
+[yes, no, maybe, don't know]
+
+Given response: a
+Correct response: a
+Score :1.0
+3. Tell me the most beautiful experience of your life 
+Given response: a
+Key words checked for: romance
+Score :0.0
+4. Vietnam is it good? 
+Given response: a
+Key words checked for: one of the worst
+Score :0.0
+Total Score :2.0
