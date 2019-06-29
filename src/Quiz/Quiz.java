@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.io.Writer;
 import java.lang.reflect.Type;
@@ -97,6 +98,7 @@ public class Quiz extends QuestionBank implements Serializable{
 	{
 		int j=1;
 		String fileName = this.getClass().getResource("/files/QuizResult.txt").getPath();
+		//URL out = this.getClass().getResource("/files/QuizResult.txt");
 		PrintWriter writer = new PrintWriter(fileName,"UTF-8");
 		//"/home/sitharth/eclipse-workspace/SidzQuizApp/src/files/QuizResult.txt","UTF-8");
 		//this.getClass().getResource().getPath()

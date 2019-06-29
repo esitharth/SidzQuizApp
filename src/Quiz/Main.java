@@ -16,8 +16,8 @@ public class Main {
 		{
 			System.out.println("-----------------------");
 			System.out.println("SidzQuizApp \n"
-					+ "For Student Login press 'S' \n"
 					+ "For Admin Login press 'A' \n"
+					+ "For Student Login press 'S' \n"
 					+ "To Quit press 'Q'"); 			// for now the admin details are hardcoded
 			System.out.println("-----------------------");
 			System.out.println("Your input: ");
@@ -36,6 +36,7 @@ public class Main {
 					String response;
 					do
 					{
+						System.out.println("-----------------------");
 						System.out.println("What do you want to do?");
 						System.out.println("a. Create Question Pool");
 						System.out.println("b. Create Quiz");
@@ -44,6 +45,7 @@ public class Main {
 						System.out.println("e. Update Questions");
 						System.out.println("f. Delete Questions");
 						System.out.println("g. Quit");
+						System.out.println("-----------------------");
 						System.out.println("Enter your response: ");
 						response = S.nextLine();
 						
@@ -63,9 +65,11 @@ public class Main {
 								break;
 							case "e":
 								Qz.updateQuestions(Qz.QuestionPool, S);
+								Qz.writeToFileQB();
 								break;
 							case "f":
 								Qz.deleteQuestions(Qz.QuestionPool, S);
+								Qz.writeToFileQB();
 						}
 					}while(!response.contains("g"));							
 				}
