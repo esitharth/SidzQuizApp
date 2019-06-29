@@ -45,14 +45,11 @@ public class Quiz extends QuestionBank implements Serializable{
 	List<Questions> questions = new ArrayList<Questions>();
 	String difficulty = "low";
 	float Score = 0;
-	
-	String filenameQ = this.getClass().getResource("/files/Quiz.of").getPath();
-			//"/home/sitharth/eclipse-workspace/SidzQuizApp/Files/Quiz.of";
-	//"../Files/Quiz.of"; 
-	String filenameTxT = this.getClass().getResource("/files/QuizResult.txt").getPath();
-			//"/home/sitharth/eclipse-workspace/SidzQuizApp/Files/QuizResult.txt";
 	Quiz Q;
-	//FileWriter writer;
+	String filenameQ = this.getClass().getResource("/files/Quiz.of").getPath();
+	String filenameTxT = this.getClass().getResource("/files/QuizResult.txt").getPath();
+	
+	
 	Quiz createQuiz(Scanner S) throws IOException
 	{
 		System.out.println("Enter the Title of the Quiz: ");

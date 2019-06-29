@@ -66,7 +66,7 @@ public class Questions implements Serializable {
 				int givenResponses = list2.size();	
 				list2.retainAll(list1);
 				int givenCorrectResponses = list2.size();
-				if(givenResponses >= givenCorrectResponses) 
+				if(givenResponses >= givenCorrectResponses) //fractional scoring for multi-option answers
 				{
 					Mark = (float)givenCorrectResponses/givenResponses;
 				}
@@ -85,7 +85,7 @@ public class Questions implements Serializable {
 				listofWords.retainAll(listofKeywords);
 				int givenResponses = listofWords.size();
 				int correctResponses = listofKeywords.size();
-				Mark = givenResponses/correctResponses;
+				Mark = (float)givenResponses/correctResponses;
 				return Mark;
 			
 		}

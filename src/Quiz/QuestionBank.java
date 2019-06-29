@@ -21,7 +21,6 @@ public class QuestionBank extends Questions {
 	
 	List<Questions> QuestionPool = new ArrayList<Questions>();
 	String filenameQB = this.getClass().getResource("/files/QuestionBank.of").getPath();
-			//"/home/sitharth/eclipse-workspace/SidzQuizApp/Files/QuestionBank.of";
 	XStream xStream = new XStream();
 	
 	void createQuestionPool(Scanner S) throws IOException
